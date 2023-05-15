@@ -1,64 +1,136 @@
-/*font-size:##px*/
+/*Generales*/
 
 * {
     margin: 0;
     text-align: center;
-    align-items: center
-}
-
-header {
-    background-color: #12151F;
+    align-items: center;
 }
 
 h1 {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: white
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white
 }
 
 h2, p {
-    font-family:'Segoe UI';
+  font-family:'Segoe UI';
+}
+
+
+h1, h2 {
+  text-align: center;
+}
+
+.grid-item, section, h1, h2, .flex-item, .flex-container, form, nav   {
+  padding: 20px;
+}
+
+/*Flex*/
+
+.flex-container {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+}
+
+@media screen and (max-width: 768px) {
+  .flex-container-discografia {
+    flex-flow: column;
+  }
+}
+
+.flex-container img {
+  flex: 1;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border: 0.5px solid #12151F;
+}
+
+/*Grid*/
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: justify;
+  align-content: stretch;
+  background-color: #12151F;
+  padding: 20px;
+}
+
+.grid-item img {
+max-width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      align-items: center;
+  }
+}
+
+/*Bordes*/
+
+.BordeSuperior {
+  border-top: 3px solid #12151F;
+  margin-top: 20px;
+}
+
+.BordeSuperiorAboutUs {
+  border-top: 4px solid white;
+}
+
+.BordesCompletos {
+  border: 5px solid #12151F;
+  margin: 20px;
+}
+
+/*Botones*/
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: right;
+  text-decoration: none;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.button--eventos {
+background-color: #ddd0d2;
+color: #1f1818;
+}
+
+.button--submit {
+  background-color: #883240;
+  color: #fff;
+}
+
+.button--submit:hover {
+  background-color: #431724;
+}
+
+/*Header*/
+
+header {
+  background-color: #12151F;
 }
 
 nav {
-    font-size: 25px;
+  font-size: 25px;
 }
 
 .fa-brands{
-    color: white;
+  color: white;
 }
 
-.flex-container {
-    display: flex;
-    flex-flow: row;
-    justify-content: space-around;
-  }
+/*Main*/
 
-  @media screen and (max-width: 768px) {
-    .flex-container-discografia {
-      flex-flow: column;
-    }
-  }
-
-  .flex-container img {
-    flex: 1;
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-    border: 0.5px solid #12151F;
-  }
-
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    text-align: justify;
-    align-content: stretch;
-    background-color: #12151F;
-    padding: 20px;
-}
-
-
-.grid-item img {
-  max-width: 100%;
+main p {
+  text-align: justify;
 }
 
 .FondoMarron {
@@ -66,28 +138,8 @@ nav {
   padding: 20px;
   font-size: min(2vw, 18px);
   color: white;
-}
-
-h1, h2 {
-  text-align: center;
-}
-
-p {
-  text-align: justify;
-}
-
-.grid-item, section, h1, h2, .flex-item, .flex-container, form, nav   {
-  padding: 20px;
-}
-
-@media screen and (max-width: 768px) {
-    .grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        align-items: center;
-    }
-}
-
+  }
+  
 .PortadaAlbum {
     position: relative;
     display: inline-block;
@@ -128,32 +180,6 @@ p {
   color: white;
 }
 
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: right;
-    text-decoration: none;
-    border-radius: 15px;
-    border: none;
-    cursor: pointer;
-}
-
-.button--eventos {
-  background-color: #ddd0d2;
-  color: #1f1818;
-}
-
-.button--submit {
-    background-color: #883240;
-    color: #fff;
-}
-
-.button--submit:hover {
-    background-color: #431724;
-}
-
 .video-container {
   position: relative;
   padding-bottom: 56.25%; /* 16:9 aspect ratio */
@@ -169,6 +195,8 @@ p {
   height: 100%;
 }
 
+/*Footer*/
+
 footer {
   background-color: #12151F;
   color: white;
@@ -179,14 +207,4 @@ footer {
 
 footer p {
 text-align: center;
-}
-
-.BordeSuperior {
-  border-top: 3px solid #12151F;
-  margin: 20px;
-}
-
-.BordesCompletos {
-  border: 5px solid #12151F;
-  margin: 20px;
 }
