@@ -15,7 +15,6 @@ h2, p {
   font-family:'Segoe UI';
 }
 
-
 h1, h2 {
   text-align: center;
 }
@@ -24,6 +23,18 @@ h1, h2 {
   padding: 20px;
 }
 
+#TamañoLetra2vw {
+font-size: 2vw;
+}
+
+#TamañoLetra3vw {
+  font-size: 3vw;
+}
+
+#TamañoLetra4vw {
+  font-size: 4vw;
+}
+  
 /*Flex*/
 
 .flex-container {
@@ -90,13 +101,13 @@ max-width: 100%;
 .button {
   display: inline-block;
   padding: 10px 20px;
-  font-size: 16px;
   font-weight: bold;
   text-align: right;
   text-decoration: none;
   border-radius: 15px;
   border: none;
   cursor: pointer;
+  font-size: 2vw;
 }
 
 .button--eventos {
@@ -136,7 +147,7 @@ main p {
 .FondoMarron {
   background-color: #371820;
   padding: 20px;
-  font-size: min(2vw, 18px);
+  font-size: min(1.5vw, 18px);
   color: white;
   }
   
@@ -176,8 +187,15 @@ main p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 100%;
   color: white;
+}
+
+.ImagenDeFondo-Texto p {
+  font-size: 1.5vw;
+}
+
+.ImagenDeFondo-Texto h2 {
+  font-size: 3vw;
 }
 
 .video-container {
@@ -195,6 +213,10 @@ main p {
   height: 100%;
 }
 
+form {
+  font-size: 2vw;
+}
+
 /*Footer*/
 
 footer {
@@ -203,8 +225,4 @@ footer {
   height: 80px;
   display: flex;
   justify-content: center;
-}
-
-footer p {
-text-align: center;
 }

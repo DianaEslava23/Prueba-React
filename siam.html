@@ -11,10 +11,10 @@
 <body>
     <header class="grid">
         <div> 
-            <h1>GRUPO SIAM COLOMBIA</h1>
+            <h1 id="TamañoLetra4vw">GRUPO SIAM COLOMBIA</h1>
         </div>
         <div>
-            <nav class="nav flex-container">
+            <nav class="nav flex-container" id="TamañoLetra4vw">
                 <a href="https://www.youtube.com/channel/UCYndhYG2joee82UHWfKYCyw"><i class="fa-brands fa-youtube"></i></a>
                 <a href="https://www.instagram.com/gruposiam/?hl=es"><i class="fa-brands fa-instagram"></i></a>
                 <a href= "https://web.facebook.com/gruposiam/?_rdc=1&_rdr"><i class="fa-brands fa-facebook"></i></a>
@@ -42,7 +42,7 @@
         </article>
         <p></p>
         <section class="BordesCompletos">
-            <h2> DISCOGRAFÍA </h2>
+            <h2 id="TamañoLetra3vw"> DISCOGRAFÍA </h2>
             <ul class="flex-container flex-container-discografia">
                 <li class="PortadaAlbum flex-item">
                     <img src="album1.jpg">
@@ -93,33 +93,46 @@
         </section>
         <section class="ImagenDeFondo">
             <div class="ImagenDeFondo-Texto">
-            <h2>PRÓXIMOS EVENTOS</h2>
-            <p> Gran concierto de las madres Diego Torres y Grupo SIAM </p>
-            <a href="https://latiquetera.com/evento/gran-concierto-de-las-madres-diego-torres-y-grupo-siam" class="button button--eventos">Consigue tus entradas</a>
+            <h2 id="TamañoLetra3vw">PRÓXIMOS EVENTOS</h2>
+            <p id="TamañoLetra3vw"> Gran concierto de las madres Diego Torres y Grupo SIAM </p>
+            <br>
+            <a href="https://latiquetera.com/evento/gran-concierto-de-las-madres-diego-torres-y-grupo-siam" class="button button--eventos" id="TamañoLetra2vw">Consigue tus entradas</a>
             </div>
         </section>
         <section>
-            <h2>ÚLTIMO LANZAMIENTO</h2>
+            <h2 id="TamañoLetra3vw">ÚLTIMO LANZAMIENTO</h2>
             <div class="video-container">
                 <iframe width=100% height=100% src="https://www.youtube.com/embed/lYRoxQOVzus" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div>
         </section>
         <section class="BordeSuperior">
-            <h2>SUSCRÍBETE</h2>
-            <p>La música nos ha permitido conectar nuestra relación y nuestra familia por lo que hoy queremos poder conectar también contigo. Si quieres mantenerte al tanto de todas nuestras novedades no esperes más y regístrate. </p>
-            <form>
+            <h2 id="TamañoLetra3vw">SUSCRÍBETE</h2>
+            <p id="TamañoLetra2vw">La música nos ha permitido conectar nuestra relación y nuestra familia por lo que hoy queremos poder conectar también contigo. Si quieres mantenerte al tanto de todas nuestras novedades no esperes más y regístrate. </p>
+            <form id="myForm">
                 <label for="name">Nombres:</label>
                 <input type="text" id="name" name="name" required>
                 <label for="last name">Apellidos:</label>
-                <input type="text" id="last name" name="last name" required>
+                <input type="text" id="last-name" name="last name" required>
                 <label for="email">Correo:</label>
                 <input type="email" id="email" name="email" required>
                 <input type="submit" value="Submit" class="button button--submit">
             </form>
+        <div id="TamañoLetra2vw">
+            <p id="message"></p>
+        </div>
+            <script>
+                document.getElementById("myForm").addEventListener("submit", function(event) {
+                event.preventDefault(); // Evita que se envíe el formulario
+                var name = document.getElementById("name").value;
+                var email = document.getElementById("email").value;
+                var message = "Gracias por registrarte " + name + ". Nos estaremos comunicando contigo al correo " + email;
+                document.getElementById("message").textContent = message;
+            });
+            </script>
         </section>
     </main>
     <footer>
-        <p>&copy; 2023 GRUPO SIAM COLOMBIA. Todos los derechos reservados.</p>
+        <p id="TamañoLetra2vw">&copy; 2023 GRUPO SIAM COLOMBIA. Todos los derechos reservados.</p>
     </footer>
     </body>
 </html>
