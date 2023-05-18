@@ -17,10 +17,11 @@
     </form>
 <script>
 
-var precioBase = document.getElementById("precioBase").value
-var descuento = document.getElementById("descuento").value
-
 function CalculoPrecio(precioBase, descuento) {
+
+    var precioBase = document.getElementById("precioBase").value
+    var descuento = document.getElementById("descuento").value
+    
     if (precioBase <= 0 || descuento > 100) {
         alert("Los valores son inválidos");
         } else if (descuento === 0) {
